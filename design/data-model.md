@@ -7,6 +7,7 @@ We need a data model for how sketches are working. For the initial MVP, we want 
 * Name
 * URI
 * Properties (optional, probably as name/value pairs, at least initially)
+* Collection (should be marked as special types of resources as a common resource pattern)
 
 ## Links
 
