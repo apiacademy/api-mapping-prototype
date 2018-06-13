@@ -8,7 +8,15 @@ This is the starting point of the API and already could yield some OpenAPI. From
 
 ![Just Resources](resources.jpg)
 
+Next some links are added. These links must have types, and these types should be used according to *Web Linking*. These links turn the resource view into an actual API map.
+
+This could already be exported as a sketch. If it were exported as a navigable HTML map at `http://example.com/sketch`, then it should have working anchors such as `http://example.com/sketch#product` or http://example.com/sketch/resource/product which would represent the product resource of the sketch. These URIs should remain stable, and they can then be used to be linked from other resources, such as the OpenAPI description.
+
 ![Adding Links](links.jpg)
+
+Some details may be added which would not change the overall set of entities in the API map (same set of resources and links), but more details are added, as the API map is fleshed out a bit.
+
+Re-exporting this API map should simply replace the export the HTML with updated HTML with the added API details. The URIs for the API map entities (resources and links) should remain stable. This means that anybody looking at the older and less detailed maps now simply would get the newer and more detailed version.
 
 ![More Details](details.jpg)
 
