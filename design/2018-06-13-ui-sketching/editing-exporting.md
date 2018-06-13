@@ -10,7 +10,7 @@ This is the starting point of the API and already could yield some OpenAPI. From
 
 Next some links are added. These links must have types, and these types should be used according to *Web Linking*. These links turn the resource view into an actual API map.
 
-This could already be exported as a sketch. If it were exported as a navigable HTML map at `http://example.com/sketch`, then it should have working anchors such as `http://example.com/sketch#product` or http://example.com/sketch/resource/product which would represent the product resource of the sketch. These URIs should remain stable, and they can then be used to be linked from other resources, such as the OpenAPI description.
+This could already be exported as a sketch. If it were exported as a navigable HTML map at `http://example.com/sketch`, then it should have working anchors such as `http://example.com/sketch#product` or `http://example.com/sketch/resource/product` which would represent the product resource of the sketch. These URIs should remain stable, and they can then be used to be linked from other resources, such as the OpenAPI description.
 
 ![Adding Links](links.jpg)
 
@@ -19,6 +19,10 @@ Some details may be added which would not change the overall set of entities in 
 Re-exporting this API map should simply replace the export the HTML with updated HTML with the added API details. The URIs for the API map entities (resources and links) should remain stable. This means that anybody looking at the older and less detailed maps now simply would get the newer and more detailed version.
 
 ![More Details](details.jpg)
+
+If a new resource gets added, that evolves the API map to have a new entity (the product detail resource type). This evolves the API in a backwards-compatible way: All the previously existing resources and links still exist, but there is now one more resource.
+
+When exporting this updated API map, there now should be a new linkable resource that may be `http://example.com/sketch#detail` or `http://example.com/sketch/resource/detail`, but most importantly, the previously existing links `http://example.com/sketch#product` or `http://example.com/sketch/resource/product` should still work. The only difference for the product resource that it now would say that a product must/can provide a `detail` link, but that, too, would be a backwards-compatible change to the API.
 
 ![Adding Resources](added-resource.jpg)
 
