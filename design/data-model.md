@@ -14,3 +14,4 @@ We need a data model for how sketches are working. For the initial MVP, we want 
 * Relation type
 * Occurrences
 * Target
+* Essential (not quite clear how to best define this, but it might be useful to have a way to distinguish links that are essential to the API workflow, and those that are secondary, this could potentially help a lot with uncluttering the visualization)
