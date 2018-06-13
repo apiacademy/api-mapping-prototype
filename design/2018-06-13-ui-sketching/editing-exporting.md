@@ -26,4 +26,8 @@ When exporting this updated API map, there now should be a new linkable resource
 
 ![Adding Resources](added-resource.jpg)
 
+Finally, when adding interlinking to the API map, the existing API map entities for resources and links once again should remain stable, only that now there might be more links showing up, because for example now the search results are a pageable collection. That would change the definition of how the `http://example.com/sketch#search-results` or `http://example.com/sketch/resource/search-results` works, but once again would not change the identifier of that resource in the exported HTML version of the API map.
+
 ![Adding Links](added-links.jpg)
+
+This progression of editing and API evolution and exporting of the API map demonstrates how the API map can evolve, how that is supported through incremental refinements and additions to the API map, and how this should be supported by an export process that always to export an API map, and that makes sure that the identity of API map entities remains stable.
